@@ -29,7 +29,7 @@ transform_fact_orders_created_sql = "/include/transform/transform_fact_orders_cr
 transform_dim_products_sql = "/include/transform/transform_dim_products.sql"
 
 with DAG(
-    dag_id ="process_orders",
+    dag_id="process_orders",
     start_date=datetime(2020,1,1),
     schedule_interval="@once",
     default_args=default_args,
@@ -148,4 +148,5 @@ with DAG(
     )
 
     create_fact_orders_created_table >> transform_fact_orders_created_table
+
 
